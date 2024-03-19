@@ -1,4 +1,8 @@
-function getCount(objects) {}
+function getCount(objects) {
+  const values = objects.filter((value) => value.x === value.y)
+
+  return values.length
+}
 
 getCount([
   { x: 1, y: 1 },
