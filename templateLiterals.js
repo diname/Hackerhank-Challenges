@@ -34,7 +34,16 @@ function readLine() {
  * literals: The tagged template literal's array of strings.
  * expressions: The tagged template literal's array of expression values (i.e., [area, perimeter]).
  */
-function sides(literals, ...expressions) {}
+function sides(literals, ...expressions) {
+  let square = expressions[1] * expressions[1],
+    air = 16 * expressions[0]
+  let s1 = (expressions[1] + Math.sqrt(square - air)) / 4
+  let s2 = (expressions[1] - Math.sqrt(square - air)) / 4
+
+  let s = [s1, s2]
+  s = s.sort()
+  return s
+}
 
 function main() {
   let s1 = +readLine()
