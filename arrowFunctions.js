@@ -31,7 +31,12 @@ function readLine() {
  * Parameter(s):
  * nums: An array of numbers.
  */
-function modifyArray(nums) {}
+function modifyArray(nums) {
+  let array = nums.map((item) => {
+    return item % 2 === 0 ? item * 2 : item * 3
+  })
+  return array
+}
 
 function main() {
   const n = +readLine()
