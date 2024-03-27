@@ -31,7 +31,7 @@ function regexVar() {
    * It must match a string that starts with 'Mr.', 'Mrs.', 'Ms.', 'Dr.', or 'Er.',
    * followed by one or more letters.
    */
-
+  const re = new RegExp(/^[MEDR][rs]{1,2}\.[a-zA-Z]+$/)
   /*
    * Do not remove the return statement
    */
